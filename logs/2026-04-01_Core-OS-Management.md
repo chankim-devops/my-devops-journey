@@ -2,7 +2,7 @@
 
 Today, I focused on the foundational aspects of Linux system management, specifically focusing on how the OS communicates with itself and manages its resources.
 
-## 🛠 1. Network & DNS Troubleshooting
+## 1. Network & DNS Troubleshooting
 - **Key File**: `/etc/resolv.conf`
   - Configured DNS nameservers to resolve domain names to IP addresses.
 - **Loopback Interface (`lo`)**:
@@ -10,7 +10,7 @@ Today, I focused on the foundational aspects of Linux system management, specifi
 - **Command**: `ip addr`
   - Used to identify network interfaces and verify assigned IP addresses.
 
-## 📊 2. Process & Resource Management
+## 2. Process & Resource Management
 - **Monitoring Tools**: Used `top` and `htop` to track real-time CPU and Memory consumption.
 - **Memory Analysis**:
   - Analyzed the difference between `free` (completely empty) and `available` (actual memory ready for new tasks).
@@ -19,7 +19,7 @@ Today, I focused on the foundational aspects of Linux system management, specifi
   - Mastered `kill -9 [PID]` to forcefully terminate unresponsive processes via **SIGKILL**.
   - Practiced background job management using `&`, `jobs`, and `fg`.
 
-## 🔐 3. File Permissions & Security
+## 3. File Permissions & Security
 - **Permission Structure**: Analyzed symbolic notation (e.g., `-rw-rw-r--`).
 - **Octal Calculation**:
   - Practiced mapping `r=4, w=2, x=1` (e.g., `664` = Owner: rw, Group: rw, Others: r).
