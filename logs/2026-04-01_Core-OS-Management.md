@@ -1,29 +1,30 @@
-# 2026-04-01 Core OS Management & Resource Monitoring
+# [2026-04-01] Linux System Administration & Resource Monitoring
 
-##[TIL] Linux System Administration & Process Management
-- ** Network & DNS Troubleshooting
-Key File: /etc/resolv.conf
+Today, I focused on the foundational aspects of Linux system management, specifically focusing on how the OS communicates with itself and manages its resources.
 
-Concept: DNS resolution for domain names (e.g., https://www.google.com/search?q=google.com).
+## 🛠 1. Network & DNS Troubleshooting
+- **Key File**: `/etc/resolv.conf`
+  - Configured DNS nameservers to resolve domain names to IP addresses.
+- **Loopback Interface (`lo`)**:
+  - Understanding `127.0.0.1`: Why the system needs to communicate with itself for internal routing and service diagnostics.
+- **Command**: `ip addr`
+  - Used to identify network interfaces and verify assigned IP addresses.
 
-Loopback IP: 127.0.0.1 (Self-communication for system diagnostics).
+## 📊 2. Process & Resource Management
+- **Monitoring Tools**: Used `top` and `htop` to track real-time CPU and Memory consumption.
+- **Memory Analysis**:
+  - Analyzed the difference between `free` (completely empty) and `available` (actual memory ready for new tasks).
+  - Used `free -h` for human-readable output.
+- **Process Control**:
+  - Mastered `kill -9 [PID]` to forcefully terminate unresponsive processes via **SIGKILL**.
+  - Practiced background job management using `&`, `jobs`, and `fg`.
 
-Command: ip addr to check local and interface IP addresses.
+## 🔐 3. File Permissions & Security
+- **Permission Structure**: Analyzed symbolic notation (e.g., `-rw-rw-r--`).
+- **Octal Calculation**:
+  - Practiced mapping `r=4, w=2, x=1` (e.g., `664` = Owner: rw, Group: rw, Others: r).
+- **Security Hardening**:
+  - Implemented `chmod 600` to restrict sensitive file access to the owner only.
+  - Explored `umask` to understand default permission inheritance for new files.
 
-- ** Process & Resource Monitoring
-top / htop: Real-time CPU and Memory usage tracking.
-
-free -h: Memory analysis (Understanding available vs free).
-
-kill -9 [PID]: Forcefully terminating unresponsive processes (SIGKILL).
-
-Background Jobs: Running tasks with & and managing them with jobs and fg.
-
-- ** File Permissions & Security
-Structure: -rw-rw-r-- (Owner, Group, Others).
-
-Octal Mode: 664 (Calculated as r=4, w=2, x=1).
-
-Command: chmod 600 to restrict access to only the owner.
-
-umask: Default permission mask for newly created files.
+---
