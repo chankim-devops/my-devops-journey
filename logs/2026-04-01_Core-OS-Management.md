@@ -1,6 +1,6 @@
 # Linux System Administration & Resource Monitoring
 
-## 📅 2026-04-01
+##  2026-04-01
 
 Today I organized the core topics of Linux system administration and resource monitoring.  
 Focused on the most practical areas: network/DNS troubleshooting, process & memory control, file permissions, and system logs.
