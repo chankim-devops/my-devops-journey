@@ -7,7 +7,7 @@ Focused on the most practical areas: network/DNS troubleshooting, process & memo
 
 ---
 
-### 1. Network & DNS Troubleshooting
+### Network & DNS Troubleshooting
 
 DNS resolution through nameserver configuration and internal diagnostics using the Loopback interface (127.0.0.1).
 
@@ -32,11 +32,3 @@ Commands:
 Bashls -l [filename]         # View detailed file permissions
 chmod 600 [filename]     # Restrict to owner: Read/Write only
 umask                    # Check default permission mask
-
-4. System Logs (Next Session)
-Log Path:
-/var/log/
-
-Today's One-Line Summary
-Covered essential Linux commands for network diagnostics → process/memory management → permission security.
-All immediately usable in real-world DevOps tasks. Next session will dive into actual log analysis.
