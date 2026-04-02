@@ -1,4 +1,4 @@
-# My DevOps Journey 🚀
+# My Study Journey 🚀
 
 I'm a non-CS major beginner on a mission to become a **Cloud / DevOps Engineer** starting from zero.
 
