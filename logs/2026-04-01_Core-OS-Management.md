@@ -1,4 +1,5 @@
 [2026-04-01] Linux System Administration & Resource Monitoring
+
 1. Network & DNS Troubleshooting
 DNS resolution via nameserver configuration.
 
@@ -37,7 +38,5 @@ chmod 600 [filename]   # Restrict to Owner: Read/Write only
 umask                  # Check default permission mask
 4. System Logs (Next Session)
 Path: /var/log/
-
-Targets: syslog, auth.log, kern.log
 
 ---
