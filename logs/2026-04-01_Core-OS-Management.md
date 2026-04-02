@@ -1,30 +1,43 @@
-# [2026-04-01] Linux System Administration & Resource Monitoring
+[2026-04-01] Linux System Administration & Resource Monitoring
+1. Network & DNS Troubleshooting
+DNS resolution via nameserver configuration.
 
-Today, I focused on the foundational aspects of Linux system management, specifically focusing on how the OS communicates with itself and manages its resources.
+Internal diagnostic via Loopback interface (127.0.0.1).
 
-## 1. Network & DNS Troubleshooting
-- **Key File**: `/etc/resolv.conf`
-  - Configured DNS nameservers to resolve domain names to IP addresses.
-- **Loopback Interface (`lo`)**:
-  - Understanding `127.0.0.1`: Why the system needs to communicate with itself for internal routing and service diagnostics.
-- **Command**: `ip addr`
-  - Used to identify network interfaces and verify assigned IP addresses.
+Commands:
 
-## 2. Process & Resource Management
-- **Monitoring Tools**: Used `top` and `htop` to track real-time CPU and Memory consumption.
-- **Memory Analysis**:
-  - Analyzed the difference between `free` (completely empty) and `available` (actual memory ready for new tasks).
-  - Used `free -h` for human-readable output.
-- **Process Control**:
-  - Mastered `kill -9 [PID]` to forcefully terminate unresponsive processes via **SIGKILL**.
-  - Practiced background job management using `&`, `jobs`, and `fg`.
+Bash
+ip addr                # Check network interfaces (lo, eth0)
+cat /etc/resolv.conf   # Verify DNS nameserver settings
+ping -c 3 127.0.0.1    # Test internal network stack
+2. Process & Resource Control
+Real-time CPU/Memory monitoring and analysis.
 
-## 3. File Permissions & Security
-- **Permission Structure**: Analyzed symbolic notation (e.g., `-rw-rw-r--`).
-- **Octal Calculation**:
-  - Practiced mapping `r=4, w=2, x=1` (e.g., `664` = Owner: rw, Group: rw, Others: r).
-- **Security Hardening**:
-  - Implemented `chmod 600` to restrict sensitive file access to the owner only.
-  - Explored `umask` to understand default permission inheritance for new files.
+Understanding available memory vs free memory.
+
+Signal management for unresponsive processes (SIGKILL).
+
+Commands:
+
+Bash
+top                    # Monitoring real-time processes
+free -h                # Check memory status (Human-readable)
+sudo kill -9 [PID]     # Forceful termination of a process
+history | tail -n 20   # Review recently executed commands
+3. File Permissions & Security
+Permission bit calculation (r=4, w=2, x=1).
+
+Implementing Least Privilege for file access.
+
+Commands:
+
+Bash
+ls -l [filename]       # View detailed file permissions
+chmod 600 [filename]   # Restrict to Owner: Read/Write only
+umask                  # Check default permission mask
+4. System Logs (Next Session)
+Path: /var/log/
+
+Targets: syslog, auth.log, kern.log
 
 ---
